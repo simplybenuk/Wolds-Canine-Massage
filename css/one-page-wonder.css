@@ -57,7 +57,7 @@ h6 {
 header.masthead {
   position: relative;
   overflow: hidden;
-  padding-top: calc(7rem + 72px);
+  padding-top: 72px;
   padding-bottom: 7rem;
   background: linear-gradient(0deg, #AE8867 0%, #A3DD69 100%);
   background-repeat: no-repeat;
@@ -116,7 +116,7 @@ header.masthead .bg-circle-4 {
 
 @media (min-width: 992px) {
   header.masthead {
-    padding-top: calc(10rem + 55px);
+    padding-top: calc(4rem + 55px);
     padding-bottom: 10rem;
   }
   header.masthead .masthead-content .masthead-heading {
