@@ -1533,3 +1533,11 @@ footer a:hover {
 .certificates {
   margin-top: 50px;
 }
+
+.certificates img {
+  max-width: 200px;
+}
+
+.certificate {
+  margin: 10px;
+}
