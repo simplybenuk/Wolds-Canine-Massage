@@ -394,6 +394,10 @@ footer a:hover {
   padding: 20px 0px;
 }
 
+#navbarmain .active {
+  text-decoration: underline;
+}
+
 #navbarmain .nav-link {
   font-weight: 600;
   padding: 10px 15px;
@@ -402,6 +406,11 @@ footer a:hover {
   text-transform: capitalize;
   font-size: 16px;
   transition: all .25s ease;
+}
+
+#navbarmain .nav-link:focus {
+  background-color: #52725b;
+  color: white;
 }
 
 .dropdown-toggle::after {
