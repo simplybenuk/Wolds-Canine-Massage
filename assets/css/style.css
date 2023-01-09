@@ -1536,9 +1536,10 @@ footer a:hover {
   opacity: 1;
 }
 
-/*# sourceMappingURL=maps/style.css.map */
+/*=================================================================
+  CUSTOM
+==================================================================*/
 
-/* CUSTOM */
 .certificates {
   margin-top: 50px;
 }
@@ -1551,6 +1552,10 @@ footer a:hover {
   margin: 10px;
 }
 
+#alert-banner {
+  text-align: center;
+}
+
 .referral-box {
   background-color: #52725b;
   color: white;
@@ -1561,3 +1566,16 @@ footer a:hover {
   margin-left: auto;
   margin-right: auto;
 }
+
+.banner-header {
+  background-image: url("assets/images/home/canine-massage.png");
+  background: url("../images/bg/yorkshire-terrier.jpg") no-repeat;
+
+}
+
+
+/*# sourceMappingURL=maps/style.css.map */
+
+
+
+
