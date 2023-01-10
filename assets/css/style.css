@@ -225,7 +225,7 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 }
 
 .section {
-  padding: 100px 0;
+  padding: 50px 0;
 }
 
 .section-sm {
@@ -1570,7 +1570,6 @@ footer a:hover {
 .banner-header {
   background-image: url("assets/images/home/canine-massage.png");
   background: url("../images/bg/yorkshire-terrier.jpg") no-repeat;
-
 }
 
 
