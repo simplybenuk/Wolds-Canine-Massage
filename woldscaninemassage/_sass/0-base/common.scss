@@ -1,0 +1,25 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+}
+
+  
+.btn {
+    padding: 1.25rem;
+    text-decoration: none   
+}
+
+.btn-primary {
+    background: #52725b;
+    color: #fff;
+    border-color: #52725b
+}
+
+.btn-primary:hover {
+    background: #77a276;
+    border-color: #52725b;
+    color: #fff
+}
+

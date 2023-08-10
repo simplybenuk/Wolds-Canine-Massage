@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <header>
+        {% include header.html %}
+    </header>
+    <!-- <p>{{ page.title }}</p> -->
+    <section>
+      {{ content }}
+    </section>
+    <footer>
+        {% include footer.html %}
+    </footer>
+    <!-- JavaScript function to toggle menu -->
+    <script>
+        const hamburgerButton = document.querySelector('.menu-button');
+        const navbar = document.querySelector('.navbar');
+
+        hamburgerButton.addEventListener('click', function() {
+            if (navbar.style.display === 'none' || navbar.style.display === '') {
+                navbar.style.display = 'block';
+            } else {
+                navbar.style.display = 'none';
+            }
+        });
+  </script>
+  </body>
+</html>

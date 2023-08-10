@@ -1,0 +1,105 @@
+.header-container {
+    margin: 0rem 10rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    @include respond-to(small) {
+        justify-content: center;
+    }
+
+    @include respond-to(medium) {
+        justify-content: center;
+    }
+}
+
+
+.logo {
+    width: 8.5rem;
+}
+
+.header-book-btn {
+    min-width: 200px;
+    font-size: 16px;
+    @include respond-to(small) {
+        display: none;
+    }
+
+    @include respond-to(medium) {
+        display: none;
+    }
+
+
+}
+
+.menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #52725b;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    width: 100%;
+
+    @media (min-width: $breakpoint-medium) {
+        display: none;
+    }
+}
+
+.navbar {
+    display: none;
+
+    @media (min-width: $breakpoint-medium) {
+        display: block;
+        
+    }
+
+    background-color: #52725b;
+    
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        
+
+        @media (min-width: $breakpoint-medium) {
+            flex-direction: row;
+        }
+    }
+
+    a {
+        display: block;
+        padding: 10px 20px;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+
+        &:hover {
+            background-color: #555;
+        }
+    }
+
+    // By default, the "Book Now" link is hidden.
+    li:first-child {
+        display: block;
+
+        @media (min-width: $breakpoint-medium) {
+            display: none;
+        }
+    }
+}
+
+
+
+
+
