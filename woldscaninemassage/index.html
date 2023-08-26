@@ -3,7 +3,7 @@ title: Wolds Canine Massage Therapy
 layout: default
 ---
 
-<div class="hero-image">
+<section class="hero-image">
     <div class="hero-overlay">
         <div class="hero-text">
             <h1>Wolds Canine Massage Therapy</h1>
@@ -11,4 +11,56 @@ layout: default
             <a class="hero-btn btn-primary">Book an Appointment</a>
         </div>   
     </div>
-</div>
+</section>
+<section class="about-intro">
+    <p>
+        Wolds Canine Massage Therapy is owned and run by Olivia Whitfield-Heap. 
+        
+    </p>
+    <p>
+        Canine massage is a specialised therapeutic treatment that uses hands-on techniques to improve circulation, 
+        alleviate muscle tension, and boost overall wellbeing in dogs. 
+    </p>
+    <a href="">How can canine massage & rehabilitation help my dog?</a>
+</section>
+<section class="testimonials">
+    <div class="testimonial-slide">
+        <h3>Robert Humphrey</h3>
+        <p>⭐⭐⭐⭐⭐</p>
+        <p>"My dog has had three sessions where he was totally relaxed both during and after the massage. Definitely therapeutic. 👍"</p>
+    </div>
+    <div class="testimonial-slide">
+        <h3>Sue Norfolk</h3>
+        <p>⭐⭐⭐⭐⭐</p>
+        <p>"Would recommend. After visiting wolds canine massage I have seen visible improvements in my dogs mobility."</p>
+    </div>
+    <div class="testimonial-slide">
+        <h3>Emma Staples</h3>
+        <p>⭐⭐⭐⭐⭐</p>
+        <p>"Really great. My dog loved it"</p>
+    </div>
+</section>
+
+<section class="iaat-member">
+    <div class="container">
+        <img src="assets/images/IAAT-logo-white.svg" alt="IAAT logo">
+        <p>Wolds Canine Massage is a member of and regulated by the <a href="https://iaat.org.uk/" target="_blank">International Association of Animal Therapists (IAAT)</a></p>
+    </div>
+</section>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("testimonial-slide");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        slides[slideIndex-1].style.display = "block";  
+        setTimeout(showSlides, 2000); // Change slide every 2 seconds
+}
+</script>
