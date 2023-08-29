@@ -33,3 +33,10 @@ h4 {
     color: #fff
 }
 
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0.625rem;
+}
