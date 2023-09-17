@@ -1,13 +1,17 @@
 
 body {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
     font-weight: 900;
     font-size: 3.75rem;
     color: #223a66;
+    @media (max-width: $breakpoint-medium) {
+        font-size: 2rem;
+    }
+
 }
 
 h4 {

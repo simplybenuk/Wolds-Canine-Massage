@@ -1,0 +1,48 @@
+.treatments {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+  
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-width: 600px;
+    margin-bottom: 20px;
+    background-color: #FFFFFF;
+}
+  
+.card-header {
+    background-color: #52725B;
+    color: white;
+    padding: 15px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+  
+.card-header h3 {
+    margin: 0;
+    color: #FFFFFF;
+}
+  
+.card-header span {
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+    color: #FFFFFF;
+}
+  
+.card-body {
+    padding: 15px;
+}
+    
+.card-body a {
+    color: #52725B;
+}
+  
+.card-body a:hover {
+    color: #77a276;
+}
+  

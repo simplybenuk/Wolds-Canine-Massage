@@ -12,6 +12,11 @@
 
     @include respond-to(medium) {
         justify-content: center;
+        margin: 0rem 1rem;
+        flex-direction: column;
+    }
+    a {
+        text-decoration: none;
     }
 }
 
@@ -32,6 +37,17 @@
     }
 
 
+}
+
+.phone-number {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #52725B;
+    img {
+        width: 30px;
+        height: 30px;
+    }
 }
 
 .menu-button {
