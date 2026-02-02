@@ -20,6 +20,15 @@
     padding: 15px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.card-title {
+    display: flex;
+    flex-direction: column;
 }
   
 .card-header h3 {
@@ -31,6 +40,25 @@
     font-size: 14px;
     display: block;
     margin-top: 5px;
+    color: #FFFFFF;
+}
+
+.book-now {
+    background-color: #FFFFFF;
+    color: #52725B;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: 2px solid #FFFFFF;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.book-now:hover {
+    background-color: #77a276;
+    border-color: #77a276;
     color: #FFFFFF;
 }
   
