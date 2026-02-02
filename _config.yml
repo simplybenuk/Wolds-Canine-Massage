@@ -23,7 +23,7 @@ email: woldscaninemassage@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Wolds Canine Massage Therapy is based in Lincolnshire and run by Olivia Whitfield-Heap. 
   Canine massage is a specialised therapeutic treatment that uses hands-on techniques to improve circulation, alleviate muscle tension, and boost overall wellbeing in dogs.
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://woldscaninemassage.co.uk" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
 github_username: simplybenuk
