@@ -283,7 +283,6 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  ffi (~> 1.16.3)
   github-pages (~> 232)
   http_parser.rb (~> 0.6.0)
   jekyll-feed (~> 0.12)
