@@ -41,9 +41,6 @@ layout: default
 </section>
 <section class="testimonials">
     {% assign testimonials = site.testimonials %}
-    {% if testimonials == nil or testimonials.size == 0 %}
-        {% assign testimonials = site.data.testimonials %}
-    {% endif %}
     {% if testimonials and testimonials.size > 0 %}
         {% for item in testimonials %}
             {% assign rating = item.rating | default: 5 %}
