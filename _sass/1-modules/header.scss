@@ -1,3 +1,33 @@
+.promo-bar {
+    background-color: #2f4d3a;
+    color: #fff;
+    font-size: 0.95rem;
+}
+
+.promo-bar__inner {
+    margin: 0 1rem;
+    padding: 8px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.promo-bar__cta {
+    background-color: #fff;
+    color: #2f4d3a;
+    padding: 6px 12px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.promo-bar__cta:hover {
+    background-color: #e9f0ec;
+}
+
 .header-container {
     margin: 0rem 10rem;
     display: flex;
@@ -114,7 +144,6 @@
         }
     }
 }
-
 
 
 
