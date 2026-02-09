@@ -21,24 +21,57 @@ layout: default
         Canine massage is a specialised therapeutic treatment that uses hands-on techniques to improve circulation, 
         alleviate muscle tension, and boost overall wellbeing in dogs. 
     </p>
+    <div class="benefits-callout">
+        <h2>Have you noticed any of the following?</h2>
+        <p>If you have noticed any of the following in your dog, massage may be beneficial:</p>
+        <ul class="paw-list">
+            <li>Lameness or limping</li>
+            <li>Yelping or crying when touched</li>
+            <li>Reluctance to be stroked or groomed</li>
+            <li>Changes to gait</li>
+            <li>Difficulty going up or down the stairs, or jumping on and off the sofa, into or out of the car</li>
+            <li>Performance changes in working or sporting dogs</li>
+            <li>Increase in anxiety or changes in behaviour</li>
+            <li>Nibbling or chewing paws or limbs</li>
+            <li>Reluctant to go for walks or walking more slowly</li>
+        </ul>
+        <p class="benefits-note">Canine massage therapy is a complementary therapy and should be used alongside veterinary advice.</p>
+    </div>
     <a href="/what-is-canine-massage">How can canine massage & rehabilitation help my dog?</a>
 </section>
 <section class="testimonials">
-    <div class="testimonial-slide">
-        <h3>Robert Humphrey</h3>
-        <p>⭐⭐⭐⭐⭐</p>
-        <p>"My dog has had three sessions where he was totally relaxed both during and after the massage. Definitely therapeutic. 👍"</p>
-    </div>
-    <div class="testimonial-slide">
-        <h3>Sue Norfolk</h3>
-        <p>⭐⭐⭐⭐⭐</p>
-        <p>"Would recommend. After visiting wolds canine massage I have seen visible improvements in my dogs mobility."</p>
-    </div>
-    <div class="testimonial-slide">
-        <h3>Emma Staples</h3>
-        <p>⭐⭐⭐⭐⭐</p>
-        <p>"Really great. My dog loved it"</p>
-    </div>
+    {% assign testimonials = site.testimonials %}
+    {% if testimonials == nil or testimonials.size == 0 %}
+        {% assign testimonials = site.data.testimonials %}
+    {% endif %}
+    {% if testimonials and testimonials.size > 0 %}
+        {% for item in testimonials %}
+            {% assign rating = item.rating | default: 5 %}
+            <div class="testimonial-slide">
+                <h3>{{ item.name }}</h3>
+                <p>
+                    {% for i in (1..rating) %}⭐{% endfor %}
+                </p>
+                <p>"{{ item.content | default: item.testimonial | strip_html | strip_newlines | strip }}"</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="testimonial-slide">
+            <h3>Robert Humphrey</h3>
+            <p>⭐⭐⭐⭐⭐</p>
+            <p>"My dog has had three sessions where he was totally relaxed both during and after the massage. Definitely therapeutic."</p>
+        </div>
+        <div class="testimonial-slide">
+            <h3>Sue Norfolk</h3>
+            <p>⭐⭐⭐⭐⭐</p>
+            <p>"Would recommend. After visiting Wolds Canine Massage I have seen visible improvements in my dog's mobility."</p>
+        </div>
+        <div class="testimonial-slide">
+            <h3>Emma Staples</h3>
+            <p>⭐⭐⭐⭐⭐</p>
+            <p>"Really great. My dog loved it."</p>
+        </div>
+    {% endif %}
 </section>
 
 <section class="iaat-member">
@@ -47,4 +80,3 @@ layout: default
         <p>Wolds Canine Massage is a member of and regulated by the <a href="https://iaat.org.uk/" target="_blank">International Association of Animal Therapists (IAAT)</a></p>
     </div>
 </section>
-

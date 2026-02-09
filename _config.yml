@@ -33,6 +33,10 @@ theme: minima
 plugins:
   - jekyll-feed
 
+collections:
+  testimonials:
+    output: false
+
 sass:
   sass_dir: _sass
   style: compressed

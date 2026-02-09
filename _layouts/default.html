@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,900;1,300;1,500;1,900&family=Roboto:ital,wght@0,300;0,500;0,900;1,500&display=swap" rel="stylesheet">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="a0a3d7c1-230b-4dcf-a007-0fa35b4be083" data-blockingmode="auto" type="text/javascript"></script>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -29,7 +30,7 @@
     <header>
         {% include header.html %}
     </header>
-    <section>
+    <section class="page-shell {% if page.url == '/' %}page-shell--home{% else %}page-shell--inner{% endif %}">
       {{ content }}
     </section>
     <footer>
