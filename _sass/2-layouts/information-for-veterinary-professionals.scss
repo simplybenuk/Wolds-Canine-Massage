@@ -1,10 +1,91 @@
-.referral-box {
-    background-color: #52725b;
-    color: white;
-    word-wrap: break-word;
-    width: 250px;
-    padding: 5px;
-    border-radius: 5px;
-    margin-left: auto;
-    margin-right: auto;
+.referral-section h3 {
+    margin-top: 0;
+}
+
+.timeline {
+    max-width: 720px;
+    margin: 1.25rem auto 0;
+    display: grid;
+    gap: 24px;
+    position: relative;
+    text-align: left;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 6px;
+    bottom: 6px;
+    width: 4px;
+    background: linear-gradient(180deg, rgba(47, 77, 58, 0.6), rgba(47, 77, 58, 0.2));
+    border-radius: 999px;
+}
+
+.step {
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    gap: 16px;
+    align-items: start;
+}
+
+.dot {
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+.dot span {
+    width: 12px;
+    height: 12px;
+    background: #2f4d3a;
+    border-radius: 50%;
+    box-shadow: 0 0 0 6px rgba(47, 77, 58, 0.18);
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid rgba(47, 77, 58, 0.12);
+    border-radius: 14px;
+    padding: 14px 16px;
+    box-shadow: var(--shadow-card);
+}
+
+.step.is-highlight .card {
+    border-color: rgba(47, 77, 58, 0.35);
+    box-shadow: 0 18px 30px rgba(31, 41, 36, 0.18);
+}
+
+.role-tag {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: var(--moss-100);
+    color: var(--ink-700);
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-weight: 700;
+}
+
+.card h4 {
+    margin: 6px 0 0;
+    font-size: 1.05rem;
+}
+
+.card p {
+    margin: 6px 0 0;
+    color: var(--ink-700);
+}
+
+@media (max-width: $breakpoint-medium) {
+    .timeline::before {
+        left: 8px;
+    }
+
+    .step {
+        grid-template-columns: 20px 1fr;
+        gap: 12px;
+    }
 }

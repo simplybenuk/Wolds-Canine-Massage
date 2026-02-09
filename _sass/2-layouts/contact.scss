@@ -1,8 +1,29 @@
+.contact-block {
+    padding: 1.75rem;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+    display: grid;
+    gap: 8px;
+}
+
+.contact-list li {
+    padding: 10px 12px;
+    background: var(--moss-100);
+    border-radius: 12px;
+}
+
 .google-maps {
     position: relative;
     padding-bottom: 75%; // This is the aspect ratio
     height: 0;
     overflow: hidden;
+    border-radius: 18px;
+    border: 1px solid rgba(47, 77, 58, 0.12);
+    box-shadow: var(--shadow-card);
     iframe {
         position: absolute;
         top: 0;
@@ -11,4 +32,3 @@
         height: 100% !important;
         }
   }
-

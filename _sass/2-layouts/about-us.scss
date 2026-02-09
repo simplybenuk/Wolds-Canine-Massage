@@ -6,6 +6,7 @@
     display: flex;
     justify-content: space-around;
     gap: 2rem;
+    padding: 2rem;
     div {
         padding: 0.625rem;
         h4 {
@@ -14,6 +15,8 @@
     }
     img {
         max-width: 330px;
+        border-radius: 16px;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
     }
     @media (max-width: $breakpoint-small) {
         flex-wrap: wrap;
@@ -24,9 +27,10 @@
     display: flex;
     justify-content: space-around;
     gap: 0.625rem;
-    padding: 1rem;
+    padding: 0.5rem 0;
 }
 .certificate img {
     max-width: 200px;
     width: 100%;
+    filter: drop-shadow(0 10px 16px rgba(0, 0, 0, 0.12));
 }

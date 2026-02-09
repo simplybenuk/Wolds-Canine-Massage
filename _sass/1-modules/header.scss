@@ -1,3 +1,37 @@
+.promo-bar {
+    background: linear-gradient(90deg, #2f4d3a 0%, #3c6b4b 50%, #2f4d3a 100%);
+    color: #fff;
+    font-size: 0.95rem;
+}
+
+.promo-bar__inner {
+    margin: 0 1rem;
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.promo-bar__cta {
+    background-color: #fff;
+    color: #2f4d3a;
+    padding: 6px 14px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.promo-bar__cta:hover {
+    background-color: #eef5f0;
+    transform: translateY(-1px);
+    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.2);
+}
+
 .header-container {
     margin: 0rem 10rem;
     display: flex;
@@ -5,7 +39,9 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 14px 10px;
+    position: relative;
+    z-index: 10;
     @include respond-to(small) {
         justify-content: center;
     }
@@ -23,6 +59,7 @@
 
 .logo {
     width: 8.5rem;
+    filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.08));
 }
 
 .header-book-btn {
@@ -43,7 +80,8 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    color: #52725B;
+    color: #2f4d3a;
+    font-weight: 600;
     img {
         width: 30px;
         height: 30px;
@@ -54,14 +92,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 20px;
+    padding: 12px 20px;
     font-size: 1rem;
-    background-color: #52725b;
+    background-color: #2f4d3a;
     border: none;
     color: #fff;
     cursor: pointer;
     outline: none;
     width: 100%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
 
     @media (min-width: $breakpoint-medium) {
         display: none;
@@ -76,7 +116,8 @@
         
     }
 
-    background-color: #52725b;
+    background: #2f4d3a;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
     
     &__list {
         list-style: none;
@@ -99,9 +140,11 @@
         color: #fff;
         text-decoration: none;
         text-align: center;
+        font-weight: 600;
+        letter-spacing: 0.02em;
 
         &:hover {
-            background-color: #555;
+            background-color: rgba(255, 255, 255, 0.15);
         }
     }
 
@@ -114,8 +157,6 @@
         }
     }
 }
-
-
 
 
 
