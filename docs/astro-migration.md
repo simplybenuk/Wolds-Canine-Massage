@@ -2,7 +2,7 @@
 
 `astro-migration` starts from the committed analytics work and preserves the business pages, styling, testimonials, tracking labels, Cookiebot configuration, external destinations, images and all PDF paths. Its production build uses Astro on Node.js 24, with no Ruby build step.
 
-The unused Jekyll starter post and its feed are not included in the Astro output. Legacy root HTML, Ruby files and Jekyll source folders stay during review; they are neither built nor published. Make changes in `src/` and `public/`.
+The unused Jekyll starter post and its feed are not included in the Astro output. Legacy HTML, Ruby files and Jekyll source folders are kept together in `_legacy/jekyll/` during review; they are neither built nor published. Make changes in `src/` and `public/`.
 
 ## Review without changing the live site
 
@@ -51,7 +51,7 @@ This restores the Jekyll site without modifying either branch. Check the deploym
 After the reviewed Astro website is accepted:
 
 1. Fetch both branches and inspect any changes made to `main` since migration started. Bring wanted content changes into Astro and repeat verification.
-2. Remove legacy Jekyll sources from the migration branch: root `*.html`, root `assets/`, `_includes/`, `_layouts/`, `_sass/`, `_testimonials/`, `_posts/`, `_config.yml`, `Gemfile`, `Gemfile.lock` and root `CNAME`. Active replacements are in `src/` and `public/`. Retain analytics tests and documentation.
+2. Remove `_legacy/jekyll/` from the migration branch. This contains the old HTML, layouts, styles, assets, testimonials, starter post, configuration and Ruby files. Active replacements are in `src/` and `public/`. Retain analytics tests and documentation.
 3. Merge `astro-migration` into `main` and push `main`. A normal merge makes Astro the current website code and records Jekyll's removal while retaining history for recovery.
 4. Verify the automatic deployment from `main`, then remove the temporary `astro-migration` environment rule. Rename the workflow to `pages.yml` on `main` and remove its temporary branch trigger and deployment allowance.
 5. Once recovery is no longer needed, remove the migration branch and review the obsolete Ruby Dependabot PRs. Those closures and branch deletions are separate actions.

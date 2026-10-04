@@ -35,4 +35,4 @@ The build keeps `/page.html` filenames so existing `.html` links and GitHub Page
 
 See [the analytics guide](docs/analytics.md) for events, GA4 reporting setup and measurement limits, and [the migration deployment guide](docs/astro-migration.md) for the branch switch, rollback and promotion to `main`.
 
-The legacy Jekyll sources remain during branch review. Edit the Astro paths above; the old sources do not participate in the Astro build.
+The legacy Jekyll sources remain in `_legacy/jekyll/` during branch review. Edit the Astro paths above; the old sources do not participate in the Astro build.
