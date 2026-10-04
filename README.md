@@ -1,6 +1,6 @@
 # Wolds Canine Massage
 
-The `astro-migration` branch builds the existing website with Astro and deploys static files to GitHub Pages. Booking remains on Square, and courses remain on the Wolds Canine Academy.
+The website uses Astro and deploys static files from `main` to GitHub Pages. Booking remains on Square, and courses remain on the Wolds Canine Academy.
 
 ## Run locally
 
@@ -33,6 +33,4 @@ npm run preview
 
 The build keeps `/page.html` filenames so existing `.html` links and GitHub Pages' extensionless links continue working. Images and historical PDF paths are retained. Only `public/` assets and generated pages are published; source files and documentation are excluded.
 
-See [the analytics guide](docs/analytics.md) for events, GA4 reporting setup and measurement limits, and [the migration deployment guide](docs/astro-migration.md) for the branch switch, rollback and promotion to `main`.
-
-The legacy Jekyll sources remain in `_legacy/jekyll/` during branch review. Edit the Astro paths above; the old sources do not participate in the Astro build.
+See [the analytics guide](docs/analytics.md) for events, GA4 reporting setup and measurement limits, and [the deployment guide](docs/deployment.md) for publishing and recovery.
