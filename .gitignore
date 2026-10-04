@@ -2,3 +2,6 @@ _site/
 .bundle/
 .jekyll-cache/
 .sass-cache/
+node_modules/
+dist/
+.astro/

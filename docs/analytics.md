@@ -2,7 +2,7 @@
 
 The site reuses Google tag `G-WSLKJ3G7QT`, loaded by the existing published Tag Manager container `GTM-W7H6FND`. The published container was checked on 4 October 2026 and contained one Google tag with page views enabled. Custom events use Google tag event commands on the existing `dataLayer`, with an explicit `send_to` destination. No extra GTM event tags or triggers are needed. Adding forwarding tags for the same events could count them twice.
 
-Build and deploy the site with `JEKYLL_ENV=production` to activate tracking. Development builds omit GTM and disable custom events. Custom events also require the hostname from `url` in `_config.yml`, with or without `www`. Keep `analytics_measurement_id` aligned with the Google tag in GTM if the Analytics property changes.
+Build and deploy the Astro site with `npm run build` to activate tracking. `npm run dev` omits GTM and disables custom events. Custom events also require the hostname from `site.url` in `src/config/site.ts`, with or without `www`. Keep `site.measurementId` aligned with the Google tag in GTM if the Analytics property changes. Keep the deployment hostname in `astro.config.mjs` aligned with this URL.
 
 ## Events
 
@@ -67,9 +67,9 @@ Custom labels are fixed in the source. The tracker does not read contact values,
 
 ## Verification
 
-Verified on 4 October 2026 with production and development Jekyll builds, nine passing regression tests, and Chromium checks of the public pages. Browser checks covered consent and withdrawal, keyboard and icon clicks, mobile navigation and resizing, and same-tab booking delivery. Real Cookiebot acceptance and intercepted requests from the existing Google tag confirmed custom events were addressed to `G-WSLKJ3G7QT`, including each service booking label once. Collection requests were intercepted before reaching Analytics, so synthetic interactions did not enter live reports.
+Verified on 4 October 2026 with the Astro production output, the development server, nine passing regression tests, and Chromium checks of all twelve public pages. Browser checks covered consent and withdrawal, keyboard and icon clicks, mobile navigation and resizing, and same-tab booking delivery. Real Cookiebot acceptance and intercepted requests from the existing Google tag confirmed custom events were addressed to `G-WSLKJ3G7QT`, including each service booking label once. Collection requests were intercepted before reaching Analytics, so synthetic interactions did not enter live reports. Page content, tracking labels and assets were also compared against the prior Jekyll production output.
 
-Run `node --test tests/analytics.test.cjs` to check consent, revocation, URL handling, scroll deduplication, visibility timing and preview guards. Build both development and production versions with Jekyll. Test the resulting pages on desktop and mobile, including a page without testimonials.
+Run `npm test` to check consent, revocation, URL handling, scroll deduplication, visibility timing and preview guards. `npm run verify` also checks Astro types and the production output. Test `npm run dev` and the production preview on desktop and mobile, including a page without testimonials. `public/assets/js/analytics.js` must remain an unprocessed classic script in `SiteLayout.astro`: it reads `document.currentScript`, which is unavailable to module scripts.
 
 After deployment, use Tag Assistant and GA4 Realtime to check the events in your own Analytics account:
 

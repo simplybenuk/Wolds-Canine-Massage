@@ -4,7 +4,7 @@ const path = require('node:path');
 const vm = require('node:vm');
 const { test } = require('node:test');
 
-const source = fs.readFileSync(path.join(__dirname, '../assets/js/analytics.js'), 'utf8');
+const source = fs.readFileSync(path.join(__dirname, '../public/assets/js/analytics.js'), 'utf8');
 
 function fixture({ consent = false, enabled = 'true', hostname = 'woldscaninemassage.co.uk' } = {}) {
     const windowListeners = {};

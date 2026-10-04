@@ -1,0 +1,70 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { getCollection } from 'astro:content';
+
+const testimonials = (await getCollection('testimonials'))
+    .sort((a, b) => a.id.localeCompare(b.id))
+    .map((item) => ({
+        name: item.data.name,
+        stars: '⭐'.repeat(item.data.rating),
+        quote: (item.rendered?.html ?? '')
+            .replace(/<[^>]*>/g, '')
+            .replace(/[\r\n]/g, '')
+            .trim(),
+    }));
+---
+
+<SiteLayout title="Wolds Canine Massage Therapy" pageId="home" pagePath="/">
+<section class="hero-image">
+    <div class="hero-overlay">
+        <div class="hero-text">
+            <h1>Wolds Canine Massage Therapy</h1>
+            <p>Improve Your Dog's Mobility, Health & Wellbeing</p>
+            <a href="https://squareup.com/appointments/book/fexjfouhksjwtj/LFXBTA90Z3XJD/services" class="hero-btn btn-primary" data-analytics-event="wcm_booking_click" data-analytics-placement="hero" data-analytics-item="appointment">Book an Appointment</a>
+        </div>   
+    </div>
+</section>
+<section class="about-intro">
+    <p>
+        Wolds Canine Massage Therapy is owned and run by Olivia Whitfield-Heap. 
+        
+    </p>
+    <p>
+        Canine massage is a specialised therapeutic treatment that uses hands-on techniques to improve circulation, 
+        alleviate muscle tension, and boost overall wellbeing in dogs. 
+    </p>
+    <div class="benefits-callout">
+        <h2 data-analytics-content="home_benefits">Have you noticed any of the following?</h2>
+        <p>If you have noticed any of the following in your dog, massage may be beneficial:</p>
+        <ul class="paw-list">
+            <li>Lameness or limping</li>
+            <li>Yelping or crying when touched</li>
+            <li>Reluctance to be stroked or groomed</li>
+            <li>Changes to gait</li>
+            <li>Difficulty going up or down the stairs, or jumping on and off the sofa, into or out of the car</li>
+            <li>Performance changes in working or sporting dogs</li>
+            <li>Increase in anxiety or changes in behaviour</li>
+            <li>Nibbling or chewing paws or limbs</li>
+            <li>Reluctant to go for walks or walking more slowly</li>
+        </ul>
+        <p class="benefits-note">Canine massage therapy is a complementary therapy and should be used alongside veterinary advice.</p>
+    </div>
+    <a href="/what-is-canine-massage" data-analytics-event="wcm_navigation_click" data-analytics-placement="home_intro" data-analytics-item="what_is_canine_massage">How can canine massage & rehabilitation help my dog?</a>
+</section>
+<section class="testimonials" data-analytics-content="testimonials">
+    {testimonials.map((item) => (
+        <div class="testimonial-slide">
+            <h3>{item.name}</h3>
+            <p>{item.stars}</p>
+            <p>"{item.quote}"</p>
+        </div>
+    ))}
+</section>
+
+<section class="iaat-member">
+    <div class="container">
+        <img src="/assets/images/IAAT-logo-white.svg" alt="IAAT logo">
+        <p>Wolds Canine Massage is a member of and regulated by the <a href="https://iaat.org.uk/" target="_blank">International Association of Animal Therapists (IAAT)</a></p>
+    </div>
+</section>
+</SiteLayout>
