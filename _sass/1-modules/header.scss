@@ -158,5 +158,8 @@
     }
 }
 
+.menu-button[aria-expanded="true"] + .navbar {
+    display: block;
+}
 
 

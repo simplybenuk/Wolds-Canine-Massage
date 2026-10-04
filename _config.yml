@@ -28,6 +28,9 @@ url: "https://woldscaninemassage.co.uk" # the base hostname & protocol for your 
 twitter_username: 
 github_username: simplybenuk
 
+# Existing GA4 destination loaded by GTM-W7H6FND. Custom events reuse this tag.
+analytics_measurement_id: G-WSLKJ3G7QT
+
 # Build settings
 theme: minima
 plugins:
@@ -49,7 +52,9 @@ sass:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
+exclude:
+  - docs/
+  - tests/
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/

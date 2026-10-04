@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="a0a3d7c1-230b-4dcf-a007-0fa35b4be083" data-blockingmode="auto" type="text/javascript"></script>
+    {% if jekyll.environment == 'production' %}
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -18,15 +19,18 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-W7H6FND');</script>
     <!-- End Google Tag Manager -->
+    {% endif %}
     <!-- Mail Chimp (disabled) -->
     <!-- <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/d6ef16ebab5d837c06a8c8d55/67aad63168cef95671795ba4c.js");</script> -->
     <!-- End Mail Chimp-->
   </head>
-  <body>
+  <body data-analytics-page="{% if page.url == '/' %}home{% else %}{{ page.name | remove: '.html' | slugify }}{% endif %}">
+    {% if jekyll.environment == 'production' %}
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7H6FND"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    {% endif %}
     <header>
         {% include header.html %}
     </header>
@@ -39,14 +43,9 @@
     <!-- JavaScript function to toggle menu -->
     <script>
         const hamburgerButton = document.querySelector('.menu-button');
-        const navbar = document.querySelector('.navbar');
-
         hamburgerButton.addEventListener('click', function() {
-            if (navbar.style.display === 'none' || navbar.style.display === '') {
-                navbar.style.display = 'block';
-            } else {
-                navbar.style.display = 'none';
-            }
+            const expanded = hamburgerButton.getAttribute('aria-expanded') === 'true';
+            hamburgerButton.setAttribute('aria-expanded', String(!expanded));
         });
     </script>
     <!--Testimonials-->
@@ -57,6 +56,7 @@
       function showSlides() {
           let i;
           let slides = document.getElementsByClassName("testimonial-slide");
+          if (!slides.length) { return; }
           for (i = 0; i < slides.length; i++) {
               slides[i].style.display = "none";  
           }
@@ -66,5 +66,9 @@
           setTimeout(showSlides, 2000); // Change slide every 2 seconds
       }
     </script>
+    <script src="{{ '/assets/js/analytics.js' | relative_url }}" data-cookieconsent="ignore"
+      data-measurement-id="{{ site.analytics_measurement_id }}" data-site-url="{{ site.url }}"
+      data-page-path="{{ page.url | relative_url }}"
+      data-enabled="{% if jekyll.environment == 'production' %}true{% else %}false{% endif %}" defer></script>
   </body>
 </html>

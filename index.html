@@ -8,7 +8,7 @@ layout: default
         <div class="hero-text">
             <h1>Wolds Canine Massage Therapy</h1>
             <p>Improve Your Dog's Mobility, Health & Wellbeing</p>
-            <a href="https://squareup.com/appointments/book/fexjfouhksjwtj/LFXBTA90Z3XJD/services" class="hero-btn btn-primary">Book an Appointment</a>
+            <a href="https://squareup.com/appointments/book/fexjfouhksjwtj/LFXBTA90Z3XJD/services" class="hero-btn btn-primary" data-analytics-event="wcm_booking_click" data-analytics-placement="hero" data-analytics-item="appointment">Book an Appointment</a>
         </div>   
     </div>
 </section>
@@ -22,7 +22,7 @@ layout: default
         alleviate muscle tension, and boost overall wellbeing in dogs. 
     </p>
     <div class="benefits-callout">
-        <h2>Have you noticed any of the following?</h2>
+        <h2 data-analytics-content="home_benefits">Have you noticed any of the following?</h2>
         <p>If you have noticed any of the following in your dog, massage may be beneficial:</p>
         <ul class="paw-list">
             <li>Lameness or limping</li>
@@ -37,9 +37,9 @@ layout: default
         </ul>
         <p class="benefits-note">Canine massage therapy is a complementary therapy and should be used alongside veterinary advice.</p>
     </div>
-    <a href="/what-is-canine-massage">How can canine massage & rehabilitation help my dog?</a>
+    <a href="/what-is-canine-massage" data-analytics-event="wcm_navigation_click" data-analytics-placement="home_intro" data-analytics-item="what_is_canine_massage">How can canine massage & rehabilitation help my dog?</a>
 </section>
-<section class="testimonials">
+<section class="testimonials" data-analytics-content="testimonials">
     {% assign testimonials = site.testimonials %}
     {% if testimonials and testimonials.size > 0 %}
         {% for item in testimonials %}
