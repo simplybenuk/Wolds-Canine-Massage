@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "engines": {
-    "node": ">=24 <25",
-    "npm": ">=11"
+    "node": ">=22.22.0",
+    "npm": ">=9.2.0"
   },
   "scripts": {
     "dev": "astro dev",
@@ -16,7 +16,7 @@
     "verify": "npm run check && npm test && npm run build && node scripts/verify-build.mjs"
   },
   "dependencies": {
-    "astro": "^7.3.5"
+    "astro": "^7.4.1"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
